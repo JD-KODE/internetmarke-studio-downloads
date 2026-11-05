@@ -14,18 +14,105 @@ Kostenlose Windows-App für das Einlesen passend formatierter JTL-CSV-Dateien, d
 - Eigene freigeschaltete Deutsche-Post-API-Zugangsdaten (API Key und API Secret) sowie Portokasse-Benutzer/E-Mail und Passwort. Ein Portokasse-Konto allein ersetzt die API-Freischaltung nicht.
 - JTL-Export im unten beschriebenen CSV-Format. Eine pauschale Kompatibilität mit beliebigen JTL-Exporten wird nicht zugesichert.
 
-## Installation und erste Einrichtung
+## Einrichtung für Einsteiger – bitte der Reihe nach
 
-1. Auf der Release-Seite unter **Assets** die Datei **Internetmarke-Studio-Setup-0.14.0.exe** herunterladen. Die GitHub-Dateien „Source code“ sind nicht der Installer.
-2. Eine laufende ältere Version schließen. Bei einem Update vorher unter **Einstellungen → Datensicherung erstellen** eine Sicherung anlegen.
-3. Setup starten und dem Installationsassistenten folgen. Desktopverknüpfung bei Bedarf auswählen. Python und BAT-Dateien sind nicht erforderlich.
-4. Der Installer ist noch nicht digital signiert. Windows SmartScreen kann deshalb warnen. Nur beim bewusst geprüften Download aus dem oben verlinkten Repository gegebenenfalls **Weitere Informationen → Trotzdem ausführen** verwenden. Windows-Schutz nicht pauschal abschalten. Die veröffentlichte SHA256.txt dient zur Integritätsprüfung, nicht als unabhängiger Sicherheitsnachweis.
-5. Internetmarke Studio über Startmenü oder Desktop starten und den Einrichtungsassistenten durchlaufen.
-6. Eigene Post-Zugangsdaten eintragen und die Verbindung prüfen. Falls die Post eine Bestätigung per E-Mail verlangt, diese zunächst abschließen. Zugangsdaten können optional für den aktuellen Windows-Benutzer geschützt gespeichert werden; automatische Anmeldung ist optional.
-7. Einen eigenen Ordner für den CSV-Austausch anlegen und in der App mit **Exportordner wählen** auswählen. Keine allgemeinen Dokumentenordner verwenden.
-8. Unter **Drucklayout** den Drucker und das Papierformat festlegen. Dasselbe Format und dieselbe Ausrichtung im Windows-Druckertreiber einstellen. Beispiel: Brother QL-800 mit DK-11201: 90 × 29 mm, Querformat.
-9. Zuerst **Neutrale Druckprobe** ausführen. Sie kostet kein Porto. Ausrichtung, Position, Randabstände und Lesbarkeit prüfen.
-10. Erst danach eine echte Sendung importieren, Adresse, Versandart und angezeigten Preis prüfen und bewusst kaufen. Bei aktivem automatischem Druck wird anschließend gedruckt. Bei Unsicherheit zunächst nur kaufen und die vorhandene Marke anschließend im Archiv drucken.
+**Bis einschließlich Schritt 6 wird keine Briefmarke gekauft. Erst der Kaufbutton in Schritt 7 kostet Porto.** Die App ist eine Beta: Nutzung auf eigenes Risiko. Vor Änderungen an einer vorhandenen Installation eine Datensicherung erstellen.
+
+### 1. Das Programm herunterladen und installieren
+
+1. Öffne die [Downloadseite für Version 0.14.0](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.14.0).
+2. Suche auf der Seite den Bereich **Assets**. Das ist die Liste der herunterladbaren Dateien; gegebenenfalls aufklappen.
+3. Klicke auf **Internetmarke-Studio-Setup-0.14.0.exe**. Die Dateien mit „Source code“ brauchst du nicht. Für den Download ist kein GitHub-Konto nötig.
+4. Öffne deinen Windows-Ordner **Downloads** und doppelklicke auf die heruntergeladene Datei.
+5. Folge den Schritten im Installationsfenster. Wähle die Desktopverknüpfung aus, falls sie angeboten wird.
+6. Starte danach **Internetmarke Studio** über die Verknüpfung oder über das Windows-Startmenü.
+
+Python musst du nicht installieren. Du musst auch keine BAT-Datei starten.
+
+**Windows zeigt eine Warnung?** Der Installer ist noch nicht digital signiert. Wenn du bewusst die Datei aus dem oben verlinkten Repository heruntergeladen und geprüft hast, kannst du bei SmartScreen gegebenenfalls **Weitere Informationen → Trotzdem ausführen** wählen. Schalte den Windows-Schutz nicht insgesamt ab.
+
+**Das sollte jetzt zu sehen sein:** das Programm und bei der ersten Einrichtung das Fenster „Willkommen bei Internetmarke Studio“. Klicke dort auf **Weiter**.
+
+### 2. Die vier Zugangsdaten für die Post bereitlegen
+
+Die App braucht zwei Arten von Zugangsdaten:
+
+| Feld im Programm | Was du dort einträgst |
+| --- | --- |
+| API Key | Den technischen Zugangsschlüssel, den du für deinen freigeschalteten Post-API-Zugang erhalten hast. |
+| API Secret | Den dazugehörigen geheimen Schlüssel. Das ist nicht dein normales Passwort. |
+| Portokasse E-Mail | Die E-Mail-Adresse deines Portokasse-Kontos. |
+| Passwort | Das Passwort dieses Portokasse-Kontos. |
+
+**Was bedeutet API?** Damit ist der technische Zugang gemeint, über den das Programm mit der Deutschen Post kommuniziert. Die Portokasse ist das Konto, über das deine Briefmarken bezahlt werden.
+
+**Du hast nur E-Mail und Passwort, aber keinen API Key und kein API Secret?** Dann fehlt noch der technische Zugang. Die Installation allein richtet ihn nicht ein. Kläre mit der Deutschen Post die Freischaltung für die Internetmarke-Schnittstelle und die zugehörigen Zugangsschlüssel. Eine mögliche Anfrage lautet: „Ich möchte Internetmarken über eine eigene Windows-Anwendung kaufen. Wie erhalte ich einen freigeschalteten Internetmarke-API-Zugang mit API Key und API Secret für meine Portokasse?“ Warte auf die Freischaltung, bevor du echte Käufe versuchst.
+
+Die Beta ist an dieser Stelle noch nicht vollständig ohne technische Vorbereitung nutzbar. JTL-Zugangsdaten gehören nicht in diese vier Felder. Poste die Schlüssel und Passwörter niemals im Forum.
+
+### 3. Das Programm mit der Post verbinden
+
+1. Trage im Einrichtungsschritt **Post verbinden** die vier Angaben in die passenden Felder ein.
+2. Klicke auf **Verbindung prüfen (kein Kauf)**.
+3. Warte auf die Rückmeldung im Programm. Falls die Post eine Bestätigung per E-Mail verlangt, öffne dein Postfach, bestätige die Freigabe und prüfe die Verbindung anschließend erneut.
+4. Wenn die Anmeldung funktioniert, kannst du **Zugang geschützt speichern** anklicken.
+5. Wenn du dich später nicht jedes Mal selbst anmelden möchtest, setze danach das Häkchen bei **Automatisch anmelden (nach Speichern)**.
+6. Klicke auf **Weiter**.
+
+**Wenn die Anmeldung nicht funktioniert:** Prüfe zuerst, ob alle vier Angaben stimmen und der API-Zugang tatsächlich freigeschaltet ist. Nicht auf Kaufen klicken. Die Verbindungsprüfung selbst kostet kein Porto.
+
+### 4. Einen Ordner für deine Versanddateien auswählen
+
+Eine **CSV-Datei** ist eine einfache Tabelle mit den Daten deiner Sendungen. JTL muss diese Datei zunächst exportieren. Internetmarke Studio liest sie dann aus einem Ordner ein.
+
+1. Öffne den Windows-Datei-Explorer, zum Beispiel mit **Windows-Taste + E**.
+2. Öffne **Dokumente**.
+3. Erstelle dort einen neuen Ordner, zum Beispiel **Internetmarke-CSV**: Rechtsklick auf eine freie Stelle → **Neu → Ordner**, Namen eingeben.
+4. Kehre zum Einrichtungsfenster der App zurück.
+5. Klicke auf **CSV-Ordner auswählen** und wähle den gerade angelegten Ordner. In der normalen Programmoberfläche heißt die Auswahl **Exportordner wählen**.
+6. Klicke auf **Weiter**.
+
+Verwende diesen Ordner ausschließlich für den CSV-Austausch. Die App kann erledigte, alte CSV-Dateien nach Sicherung automatisch entfernen; Details stehen weiter unten.
+
+**Wichtig für JTL:** Das Auswählen des Ordners erstellt noch keinen Export in JTL. Dein JTL-Export muss eine Datei mit den vorgegebenen Spalten erzeugen und in diesem Ordner speichern. Es gibt keine automatische Spaltenzuordnung. Wenn du noch keine passende Exportvorlage hast, lass sie anhand des CSV-Schemas weiter unten einrichten. Für genaue Klicks innerhalb von JTL werden deine JTL-Version und die bisherige Exportart benötigt; eine universelle Anleitung dafür wäre unzuverlässig.
+
+### 5. Drucker und Papier einstellen
+
+1. Schalte deinen Drucker ein und lege die Etiketten beziehungsweise das Papier ein.
+2. Der Drucker muss in Windows bereits eingerichtet sein. Wenn er dort noch fehlt, installiere zuerst den Treiber des Druckerherstellers.
+3. Klicke im Einrichtungsschritt **Drucker und Layout** auf **Drucker wählen** und wähle deinen Drucker.
+4. Klicke auf **Papier wählen** und stelle die Größe deines tatsächlich eingelegten Papiers ein.
+5. Stelle dieselbe Größe und Ausrichtung auch in den Windows-Druckeinstellungen dieses Druckers ein.
+
+**Beispiel – nur für dieses Material:** Brother QL-800 mit DK-11201: **90 × 29 mm, Querformat**. Für andere Etiketten wählst du deren eigene Größe. Breite und Höhe stehen meist auf der Verpackung.
+
+### 6. Kostenlos ausprobieren, ob der Druck passt
+
+1. Klicke im Einrichtungsfenster auf **Druckprobe**. Später findest du die Funktion unter **Drucklayout → Neutrale Druckprobe**.
+2. Prüfe den Ausdruck: Ist alles vollständig auf dem Papier? Ist nichts abgeschnitten? Stimmt die Ausrichtung?
+3. Falls etwas nicht passt, korrigiere Papierformat und Ausrichtung in App und Druckertreiber. Wiederhole dann die Druckprobe.
+4. Wenn die Probe passt, klicke auf **Weiter** und anschließend auf **Einrichtung abschließen**.
+
+**Diese Probe ist keine gültige Briefmarke und kostet kein Porto.** Für den ersten echten Druck die Marke in Originalgröße lassen und nicht mit Logos oder Text überdecken.
+
+### 7. Die erste echte Sendung bearbeiten – ab hier kann Porto kosten
+
+1. Lass aus JTL zunächst **nur eine echte Sendung** im geforderten CSV-Format in den ausgewählten Ordner exportieren.
+2. Lass Internetmarke Studio geöffnet. Nach ungefähr fünf Sekunden sollte die Sendung in **Versand** erscheinen.
+3. Prüfe Empfänger, Lieferscheinnummer, Versandart und Preis. Nutze nicht die fiktive Beispieladresse für einen echten Kauf.
+4. Entscheide, ob nach dem Kauf automatisch gedruckt werden soll. Wenn du zunächst nur die Marke kaufen möchtest, lasse den automatischen Druck ausgeschaltet.
+5. **Erst wenn alles stimmt, klicke einmal auf den Kaufbutton mit dem Preis. Dieser Klick kauft verbindlich – es kommt keine zweite Nachfrage.**
+6. Warte auf das Ergebnis. Bei Bedarf kannst du die bereits vorhandene Marke im **Archiv** auswählen und über **Marke direkt drucken** drucken.
+
+**Es erscheint keine Sendung?** Prüfe, ob die Datei wirklich im ausgewählten Ordner liegt, auf „.csv“ endet und das vorgegebene Format hat. Die App muss laufen. Der Import allein kauft keine Briefmarke.
+
+**Die App meldet nach dem Kauf einen Downloadfehler?** Nicht erneut kaufen. Öffne **Archiv → Vorhandenen Kauf abrufen**. Bei einem Druckproblem zuerst die Windows-Druckwarteschlange prüfen und die vorhandene Marke verwenden.
+
+**Vor dem Versenden:** Die App druckt nur die Frankierung, nicht die Empfängeradresse. Bringe die Adresse separat auf der Sendung an. Die Marke muss vollständig und lesbar sein. Eine gekaufte Marke darf nur für eine Sendung verwendet werden.
+
+### 8. Beim nächsten Start
+
+Wenn du die Zugangsdaten gespeichert und die automatische Anmeldung aktiviert hast, meldet sich die App automatisch an. Den CSV-Ordner musst du nicht erneut auswählen. Neue passende Dateien werden eingelesen, solange das Programm läuft. **Käufe bleiben eine bewusste Aktion über den Kaufbutton.**
 
 ## CSV-Format und automatisches Einlesen
 
