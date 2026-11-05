@@ -1,22 +1,15 @@
-# Internetmarke Studio – Downloads
+# Internetmarke Studio – kostenlose öffentliche Beta 0.15.2
 
-Kostenlose Windows-App für JTL-CSV und Internetmarken. Dieses Repository enthält ausschließlich die Veröffentlichungstechnik und fertige Installer. Der Quellcode der Anwendung liegt in einem separaten privaten Repository.
+Windows-App für JTL-CSV, Internetmarken und Etikettendruck. Kein offizielles Produkt von JTL oder Deutsche Post.
 
-[Neueste Version herunterladen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest)
+**[Windows-Installer herunterladen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest)** · [Einrichtung für Einsteiger](INSTALLATION.md) · [Neue Funktionen Schritt für Schritt](BETA-ANLEITUNG.md)
 
-Setup.exe herunterladen und installieren. Python wird nicht separat benötigt.
-Ab Version 0.14.0: **Einstellungen → Updates**. Automatische Suche beim Start ist optional; installiert wird ausschließlich auf Wunsch.
+Neu: CSV-Assistent und Versandregeln, Druckerprofile, Sammelverarbeitung, optionale Automatik mit Testlauf/Pause/Ausgabenlimit, Verarbeitungsstatus und Wawi-Sammelrückdatei. Drucklayout-KeyError korrigiert.
 
-Vor dem ersten echten Versand bitte eine neutrale Druckprobe und einen einzelnen Live-Kauf testen. Der Installer ist noch nicht digital signiert.
+**Beta: Nutzung auf eigene Gefahr.** Vorher sichern, zuerst kostenloser Testlauf und neutrale Druckprobe, danach eine echte Sendung prüfen. Die Software ist kostenlos; Live-Käufe kosten Porto. Nach bewusster Aktivierung kauft die Live-Automatik neue CSV-Sendungen ohne Einzelrückfrage. Nach Neustart ist sie aus.
 
-## Veröffentlichung
+Normale Installation mit Desktopverknüpfung, kein separates Python. Vor Update App schließen. Ab 0.14.0: Einstellungen → Updates, Installation nur nach Bestätigung. Installer noch nicht digital signiert.
 
-Der private Windows-Build führt Tests und einen Installationstest aus. Nur die geprüfte Setup.exe und SHA256.txt werden anschließend hier als Release veröffentlicht; keine Adressdaten, Zugangsdaten, Testbilder oder privaten Quelltexte.
+Adressetikett nur als Entwurf, Wawi-Rückdatei nur für normale Lieferscheine (kein WMS-Paketimport). Kein gemeinsamer Mehrplatzbetrieb. Physische Drucke und echte Postkäufe müssen in der eigenen Umgebung getestet werden. Hinterlegter Preisstand bis 31.12.2026.
 
-Eine Übergabe verwendet `delivery.json` mit einem kurz gültigen Downloadlink und festgelegten SHA-256-Prüfsummen. Der Workflow prüft Paket, Installer und Testergebnis und veröffentlicht erst danach das Release. Anschließend wird die Übergabedatei entfernt. Ein abgelaufener Link muss durch eine neue Übergabe ersetzt werden.
-
-## Öffentliche Beta
-
-[Installation, Einrichtung, CSV-Format und Beta-Hinweise](INSTALLATION.md)
-
-[Vorbereiteter Forumsbeitrag](FORUM-BEITRAG.md)
+Dieses Repository enthält Downloads, Dokumentation und freigegebene Screenshots ohne Kundendaten. Der App-Quellcode bleibt privat.
