@@ -1,4 +1,4 @@
-# Internetmarke Studio 0.15.2 – öffentliche Beta
+# Internetmarke Studio 0.16.0 – öffentliche Beta
 
 Kostenlose Windows-App für das Einlesen passend formatierter JTL-CSV-Dateien, den Kauf einzelner Internetmarken über die eigene Deutsche-Post-Portokasse und den Etikettendruck. Eigenständiges Community-Projekt; kein offizielles Produkt von JTL oder Deutsche Post und keine bestätigte Zertifizierung durch diese Anbieter.
 
@@ -6,17 +6,23 @@ Kostenlose Windows-App für das Einlesen passend formatierter JTL-CSV-Dateien, d
 
 **Echte Portokosten:** Die Software ist kostenlos, Internetmarken sind kostenpflichtig. Der Kaufbutton löst den verbindlichen Kauf aus – ohne zusätzliche Bestätigungsabfrage. Verbindungsprüfung und neutrale Druckprobe kaufen keine Marken. CSV-Import ohne aktivierte Live-Automatik kauft keine Marken. Eine ausdrücklich aktivierte Live-Automatik kauft neue CSV-Sendungen kostenpflichtig ohne Einzelrückfrage.
 
-## Neue Funktionen in 0.15.2
+## Marken ohne CSV kaufen
+
+Links **Marken kaufen** öffnen, Briefart und Menge wählen und dem Warenkorb hinzufügen. Gesamtpreis prüfen, optional „Nach dem Kauf alle Marken drucken“ aktivieren und **Kostenpflichtig kaufen** wählen. Der CSV-Testmodus gilt nicht für diesen Kaufbutton. Bis zu 100 Marken pro Bestellung; echte Käufe werden nacheinander ausgeführt und einzeln archiviert.
+
+Unter **Meine Bestellungen** lassen sich noch ungedruckte Marken gemeinsam drucken. Bei Fehlern Archiv und Druckwarteschlange prüfen. „Rest kaufen“ kauft nur noch nicht gestartete Marken nach Bestätigung. Shop-Marken haben keinen JTL-Lieferschein und sind vom Wawi-Rückexport ausgeschlossen. CSV-Ordner und JTL-Export sind nur für den Versandbereich erforderlich.
+
+## Weitere Funktionen
 
 CSV-Assistent, Versandregeln, Druckerprofile, Sammelverarbeitung, Automatik mit Pause/Budget/Testlauf und Wawi-Sammelrückdateien. Enthält den Drucklayout-KeyError-Fix aus 0.15.1. **[Neue Funktionen Schritt für Schritt](BETA-ANLEITUNG.md)**.
 
 ## Download und Voraussetzungen
 
-- [Download Version 0.15.2](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.15.2)
+- [Download Version 0.16.0](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.16.0)
 - [Neueste Version](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest)
 - Windows 10/11 in einer x64-kompatiblen Umgebung, Internetverbindung und installierter Windows-Druckertreiber.
 - Eigene freigeschaltete Deutsche-Post-API-Zugangsdaten (API Key und API Secret) sowie Portokasse-Benutzer/E-Mail und Passwort. Ein Portokasse-Konto allein ersetzt die API-Freischaltung nicht.
-- JTL-Export im unten beschriebenen CSV-Format. Eine pauschale Kompatibilität mit beliebigen JTL-Exporten wird nicht zugesichert.
+- Nur für CSV-Versand: JTL-Export im unten beschriebenen CSV-Format. Eine pauschale Kompatibilität mit beliebigen JTL-Exporten wird nicht zugesichert.
 
 ## Einrichtung für Einsteiger – bitte der Reihe nach
 
@@ -24,9 +30,9 @@ CSV-Assistent, Versandregeln, Druckerprofile, Sammelverarbeitung, Automatik mit 
 
 ### 1. Das Programm herunterladen und installieren
 
-1. Öffne die [Downloadseite für Version 0.15.2](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.15.2).
+1. Öffne die [Downloadseite für Version 0.16.0](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.16.0).
 2. Suche auf der Seite den Bereich **Assets**. Das ist die Liste der herunterladbaren Dateien; gegebenenfalls aufklappen.
-3. Klicke auf **Internetmarke-Studio-Setup-0.15.2.exe**. Die Dateien mit „Source code“ brauchst du nicht. Für den Download ist kein GitHub-Konto nötig.
+3. Klicke auf **Internetmarke-Studio-Setup-0.16.0.exe**. Die Dateien mit „Source code“ brauchst du nicht. Für den Download ist kein GitHub-Konto nötig.
 4. Öffne deinen Windows-Ordner **Downloads** und doppelklicke auf die heruntergeladene Datei.
 5. Folge den Schritten im Installationsfenster. Wähle die Desktopverknüpfung aus, falls sie angeboten wird.
 6. Starte danach **Internetmarke Studio** über die Verknüpfung oder über das Windows-Startmenü.
@@ -161,7 +167,7 @@ Ab Version 0.14.0 unter **Einstellungen → Updates** nach neuen Versionen suche
 
 Adressdaten und Kaufjournal werden lokal gespeichert und sind nicht vollständig verschlüsselt. Gespeicherte Post-Zugangsdaten sind über Windows DPAPI an den Windows-Benutzer gebunden. Eine kopierte Sicherung macht diese Zugangsdaten nicht automatisch auf einem neuen PC nutzbar. Für Post-Funktionen wird die Post-API kontaktiert, für Updates GitHub und beim Spendenbutton PayPal. Keine Telemetrie implementiert.
 
-Es gibt keinen gemeinsamen Mehrplatzbetrieb und keinen direkten Zugriff auf die JTL-Datenbank. Drucker- und JTL-Versionen müssen im eigenen Ablauf erprobt werden. Automatisierte Tests ersetzen keinen echten Druck- und Versandtest. Die in 0.15.2 hinterlegten Portopreise sind zeitlich begrenzt; ab 2027 ist für weitere Käufe eine aktualisierte Preisversion erforderlich.
+Es gibt keinen gemeinsamen Mehrplatzbetrieb und keinen direkten Zugriff auf die JTL-Datenbank. Drucker- und JTL-Versionen müssen im eigenen Ablauf erprobt werden. Automatisierte Tests ersetzen keinen echten Druck- und Versandtest. Die in 0.16.0 hinterlegten Portopreise sind zeitlich begrenzt; ab 2027 ist für weitere Käufe eine aktualisierte Preisversion erforderlich.
 
 Fehler bitte mit App-Version, Windows-Version, JTL-Version, Druckermodell, Papierformat, Reproduktionsschritten und bereinigter Fehlermeldung melden. Keine Passwörter, API-Schlüssel, Kundenadressen oder scannbaren Internetmarken öffentlich posten.
 

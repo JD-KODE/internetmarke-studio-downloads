@@ -1,3 +1,17 @@
+# Neu in 0.16.0: Marken kaufen ohne CSV
+
+Links „Marken kaufen“ öffnen. Kompakt-, Groß- oder Maxibrief wählen, Menge einstellen und zum Warenkorb hinzufügen. Der Warenkorb zeigt Anzahl und Gesamtporto. „Auswahl entfernen“ entfernt eine Briefart; gewünschte Menge danach neu hinzufügen.
+
+Mit eigener Portokasse anmelden. Der Button „Kostenpflichtig kaufen“ startet den echten Einkauf zum angezeigten Gesamtpreis. Kein CSV-Import, Empfänger oder JTL-Lieferschein erforderlich. Bis zu 100 Marken pro Warenkorb, sequenziell verarbeitet und einzeln im Archiv gespeichert. Portoetiketten ohne Empfängeradresse; Adresse separat anbringen.
+
+Optional „Nach dem Kauf alle Marken drucken“ aktivieren. Drucker vorher wählen und neutrale Probe ausführen. Alternativ später unter „Meine Bestellungen“ die Bestellung auswählen und „Alle ungedruckten drucken“ anklicken. Das kauft kein neues Porto. Bereits an Windows übergebene oder unklare Druckaufträge werden ausgelassen. Übergabe bestätigt keinen physischen Ausdruck. Nachdruck einzelner Marken im Archiv nur nach Prüfung der Warteschlange; dieselbe Marke nicht für mehrere Sendungen verwenden. Beim PDF-Druck außerhalb der App kann der Druckstatus nicht automatisch erfasst werden.
+
+„Stopp“ beendet nach der aktuellen Marke. Bei Teilfehler bleiben gekaufte Marken erhalten. „Im Archiv öffnen“ zeigt die zugehörigen Einträge; unklare Käufe zuerst prüfen/abrufen. „Rest kaufen“ kauft nur noch nicht gestartete Marken nach erneuter Bestätigung. Nach Neustart wird kein Einkauf automatisch fortgesetzt. Warenkorbentwürfe sind nur während der Sitzung gespeichert; gestartete Bestellungen sind dauerhaft gespeichert und nach Anmeldung im gleichen Postkonto sichtbar.
+
+Die CSV-Automatik muss vor Shop-Käufen ausgeschaltet sein. Ihr Testlauf-Schalter gilt nicht für den Shop: der Shop-Kaufbutton kauft immer echtes Porto. Shop-Marken ohne Lieferschein können nicht als Wawi-Versanddaten exportiert werden. Preisstand nur bis Ende 2026. Öffentliche Beta, zunächst eine Marke im eigenen Ablauf prüfen.
+
+---
+
 # Internetmarke Studio 0.15.2 – Beta: Einrichtung und Test
 
 Kostenlose öffentliche Beta. Nutzung auf eigene Gefahr; Fehler sind möglich. Keine offizielle Software von JTL oder Deutsche Post. Vor Einsatz Daten sichern und zunächst eine Sendung testen. Windows 10/11 x64, Python muss nicht installiert sein. Der Installer verwendet dieselbe App-ID und denselben Datenordner wie die vorherige Version.

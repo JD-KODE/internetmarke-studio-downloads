@@ -1,10 +1,12 @@
-# Internetmarke Studio – kostenlose öffentliche Beta 0.15.2
+# Internetmarke Studio – kostenlose öffentliche Beta 0.16.0
 
 Windows-App für JTL-CSV, Internetmarken und Etikettendruck. Kein offizielles Produkt von JTL oder Deutsche Post.
 
 **[Windows-Installer herunterladen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest)** · [Einrichtung für Einsteiger](INSTALLATION.md) · [Neue Funktionen Schritt für Schritt](BETA-ANLEITUNG.md)
 
-Neu: CSV-Assistent und Versandregeln, Druckerprofile, Sammelverarbeitung, optionale Automatik mit Testlauf/Pause/Ausgabenlimit, Verarbeitungsstatus und Wawi-Sammelrückdatei. Drucklayout-KeyError korrigiert.
+Neu in 0.16.0: **Marken kaufen ohne CSV** – Produktkarten, Mengenwahl, Warenkorb, Gesamtpreis, Bestellübersicht und Sammeldruck. Der Shop-Kaufbutton kauft immer echtes Porto; der CSV-Testlauf gilt dort nicht.
+
+Weiterhin enthalten: CSV-Assistent und Versandregeln, Druckerprofile, Sammelverarbeitung, optionale Automatik mit Testlauf/Pause/Ausgabenlimit, Verarbeitungsstatus und Wawi-Sammelrückdatei. Drucklayout-KeyError korrigiert.
 
 **Beta: Nutzung auf eigene Gefahr.** Vorher sichern, zuerst kostenloser Testlauf und neutrale Druckprobe, danach eine echte Sendung prüfen. Die Software ist kostenlos; Live-Käufe kosten Porto. Nach bewusster Aktivierung kauft die Live-Automatik neue CSV-Sendungen ohne Einzelrückfrage. Nach Neustart ist sie aus.
 
