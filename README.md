@@ -1,18 +1,19 @@
-# Internetmarke Studio 0.17.3 – kostenlose öffentliche Beta
+# Internetmarke Studio
 
-Windows-App für JTL-CSV und Internetmarken über die eigene Deutsche-Post-Portokasse. Eigenständiges Community-Projekt, kein offizielles Produkt von JTL oder Deutsche Post.
+Kostenlose Windows-App für JTL-CSV und den direkten Kauf von Internetmarken. Porto ist kostenpflichtig; Spenden sind freiwillig.
 
-- Übersichtlicher Versandbereich: Kaufen und Drucken oben, Einstellungen unten.
-- Marken-Shop ohne CSV: Standard-, Kompakt-, Groß- und Maxibrief; optional Einschreiben Einwurf oder Einschreiben/Übergabe.
-- Guthabenanzeige mit Zeitstempel, Aktualisieren und „Portokasse aufladen“.
-- Automatik übernimmt beim Aktivieren auch offene Imports und vorherige Testläufe. Bereits gekaufte, archivierte oder ungeklärte Kaufversuche bleiben ausgeschlossen.
-- Ausgabenlimit optional und standardmäßig aus; sechs Schritte für die Ersteinrichtung.
-- Archiv, Druckerprofile, CSV-Assistent, Datensicherung und Updates bleiben enthalten.
+[Download der aktuellen Version](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) · [Einrichtung](INSTALLATION.md) · [Bedienung](BETA-ANLEITUNG.md)
 
-**[Windows-Installer herunterladen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.17.3)** · [Einrichtung](INSTALLATION.md) · [Bedienung](BETA-ANLEITUNG.md)
+## Internetmarke Studio 0.18.1 – öffentliche Beta
+- Hintergrundbetrieb mit Symbol neben der Windows-Uhr: öffnen, pausieren und beenden.
+- Optionaler Start bei der Windows-Anmeldung; Kaufautomatik nach Neustart weiterhin aus.
+- Kurzer Startdialog mit „Automatik starten“, „Abbrechen“ und optionalem Wechsel in den Hintergrund.
+- Verständlichere Fehlerhilfe; unklare Käufe nicht erneut kaufen.
+- Datenschutzübersicht, Diagnoseexport ohne Kundendaten und passwortgeschützte manuelle Sicherungen.
+- Ausgabenlimit weiterhin optional; standardmäßig keines.
 
-**Beta – Nutzung auf eigenes Risiko.** Vorher sichern und eine einzelne Sendung testen. Software kostenlos, Porto kostenpflichtig. Manuelle Kaufbuttons kaufen sofort; bestätigte Live-Automatik kauft ohne Einzelrückfrage. Automatik startet nach App-Neustart nicht selbstständig. Testmodus und optionales Limit werden gespeichert. Keine automatische Aufladung.
+**Vor dem Update:** Datensicherung erstellen. App über Rechtsklick auf das Symbol neben der Windows-Uhr → Beenden vollständig schließen und laufende Vorgänge abwarten. Erst dann Setup installieren. Bei „Anwendungen konnten nicht geschlossen werden“ App beenden und „Nochmals versuchen“ wählen, nicht ignorieren.
 
-Installer noch nicht digital signiert. Kein separates Python erforderlich. Vor Update App schließen, dann Setup über die vorhandene Installation installieren. Alternativ Einstellungen → Updates. Keine Gewähr für alle Drucker/JTL-Versionen; gesetzliche Ansprüche bleiben unberührt. 154 Tests und Windows-Installation/App-Start/Deinstallation erfolgreich; Entwicklungstests ohne echte Portokäufe. Physische Ausdrucke und Einschreiben im eigenen Ablauf prüfen.
+169 automatisierte Windows-Tests sowie Installation, EXE-Start und Deinstallation bestanden. Keine echten Käufe oder physischen Ausdrucke im Entwicklungstest. Installer noch unsigniert. Nutzung als Beta auf eigenes Risiko; gesetzliche Ansprüche bleiben unberührt.
 
-Quellcode bleibt privat. Kein gemeinsamer Mehrplatzbetrieb. Preisstand bis 31.12.2026; danach ist ein Preisupdate erforderlich.
+Hintergrundbetrieb benötigt einen eingeschalteten PC und angemeldeten Windows-Benutzer; kein Windows-Dienst. Bestehende lokale Adressen, Kaufjournal und ältere/automatische Sicherungen sind nicht vollständig verschlüsselt. Die Bezeichnung „Private Testversion“ im Programmfenster stammt aus der Testphase; dieses unveränderte, geprüfte Paket ist jetzt als öffentliche Beta freigegeben.

@@ -1,10 +1,26 @@
-# Einrichtung und Update – Internetmarke Studio 0.17.3
+## Internetmarke Studio 0.18.1 – öffentliche Beta
+- Hintergrundbetrieb mit Symbol neben der Windows-Uhr: öffnen, pausieren und beenden.
+- Optionaler Start bei der Windows-Anmeldung; Kaufautomatik nach Neustart weiterhin aus.
+- Kurzer Startdialog mit „Automatik starten“, „Abbrechen“ und optionalem Wechsel in den Hintergrund.
+- Verständlichere Fehlerhilfe; unklare Käufe nicht erneut kaufen.
+- Datenschutzübersicht, Diagnoseexport ohne Kundendaten und passwortgeschützte manuelle Sicherungen.
+- Ausgabenlimit weiterhin optional; standardmäßig keines.
+
+**Vor dem Update:** Datensicherung erstellen. App über Rechtsklick auf das Symbol neben der Windows-Uhr → Beenden vollständig schließen und laufende Vorgänge abwarten. Erst dann Setup installieren. Bei „Anwendungen konnten nicht geschlossen werden“ App beenden und „Nochmals versuchen“ wählen, nicht ignorieren.
+
+169 automatisierte Windows-Tests sowie Installation, EXE-Start und Deinstallation bestanden. Keine echten Käufe oder physischen Ausdrucke im Entwicklungstest. Installer noch unsigniert. Nutzung als Beta auf eigenes Risiko; gesetzliche Ansprüche bleiben unberührt.
+
+Hintergrundbetrieb benötigt einen eingeschalteten PC und angemeldeten Windows-Benutzer; kein Windows-Dienst. Bestehende lokale Adressen, Kaufjournal und ältere/automatische Sicherungen sind nicht vollständig verschlüsselt. Die Bezeichnung „Private Testversion“ im Programmfenster stammt aus der Testphase; dieses unveränderte, geprüfte Paket ist jetzt als öffentliche Beta freigegeben.
+
+---
+
+# Einrichtung und Update – Internetmarke Studio 0.18.1
 
 **Öffentliche Beta, Nutzung auf eigenes Risiko.** Vorher Datensicherung erstellen. Echte Käufe kosten Porto; der einzelne Kaufbutton kauft ohne weitere Bestätigung. Keine offizielle JTL-/Post-Anwendung.
 
 ## Installation
-1. [Version 0.17.3 öffnen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.17.3).
-2. Unter Assets **Internetmarke-Studio-Setup-0.17.3.exe** herunterladen und öffnen.
+1. [Version 0.18.1 öffnen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.18.1).
+2. Unter Assets **Internetmarke-Studio-Setup-0.18.1.exe** herunterladen und öffnen.
 3. Setup abschließen und die Desktop-Verknüpfung starten. Python ist enthalten.
 4. Der Installer ist noch nicht digital signiert. Quelle prüfen; Windows-Schutz nicht generell abschalten.
 
