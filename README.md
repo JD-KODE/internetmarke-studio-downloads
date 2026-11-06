@@ -1,17 +1,18 @@
-# Internetmarke Studio – kostenlose öffentliche Beta 0.16.0
+# Internetmarke Studio 0.17.3 – kostenlose öffentliche Beta
 
-Windows-App für JTL-CSV, Internetmarken und Etikettendruck. Kein offizielles Produkt von JTL oder Deutsche Post.
+Windows-App für JTL-CSV und Internetmarken über die eigene Deutsche-Post-Portokasse. Eigenständiges Community-Projekt, kein offizielles Produkt von JTL oder Deutsche Post.
 
-**[Windows-Installer herunterladen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest)** · [Einrichtung für Einsteiger](INSTALLATION.md) · [Neue Funktionen Schritt für Schritt](BETA-ANLEITUNG.md)
+- Übersichtlicher Versandbereich: Kaufen und Drucken oben, Einstellungen unten.
+- Marken-Shop ohne CSV: Standard-, Kompakt-, Groß- und Maxibrief; optional Einschreiben Einwurf oder Einschreiben/Übergabe.
+- Guthabenanzeige mit Zeitstempel, Aktualisieren und „Portokasse aufladen“.
+- Automatik übernimmt beim Aktivieren auch offene Imports und vorherige Testläufe. Bereits gekaufte, archivierte oder ungeklärte Kaufversuche bleiben ausgeschlossen.
+- Ausgabenlimit optional und standardmäßig aus; sechs Schritte für die Ersteinrichtung.
+- Archiv, Druckerprofile, CSV-Assistent, Datensicherung und Updates bleiben enthalten.
 
-Neu in 0.16.0: **Marken kaufen ohne CSV** – Produktkarten, Mengenwahl, Warenkorb, Gesamtpreis, Bestellübersicht und Sammeldruck. Der Shop-Kaufbutton kauft immer echtes Porto; der CSV-Testlauf gilt dort nicht.
+**[Windows-Installer herunterladen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.17.3)** · [Einrichtung](INSTALLATION.md) · [Bedienung](BETA-ANLEITUNG.md)
 
-Weiterhin enthalten: CSV-Assistent und Versandregeln, Druckerprofile, Sammelverarbeitung, optionale Automatik mit Testlauf/Pause/Ausgabenlimit, Verarbeitungsstatus und Wawi-Sammelrückdatei. Drucklayout-KeyError korrigiert.
+**Beta – Nutzung auf eigenes Risiko.** Vorher sichern und eine einzelne Sendung testen. Software kostenlos, Porto kostenpflichtig. Manuelle Kaufbuttons kaufen sofort; bestätigte Live-Automatik kauft ohne Einzelrückfrage. Automatik startet nach App-Neustart nicht selbstständig. Testmodus und optionales Limit werden gespeichert. Keine automatische Aufladung.
 
-**Beta: Nutzung auf eigene Gefahr.** Vorher sichern, zuerst kostenloser Testlauf und neutrale Druckprobe, danach eine echte Sendung prüfen. Die Software ist kostenlos; Live-Käufe kosten Porto. Nach bewusster Aktivierung kauft die Live-Automatik neue CSV-Sendungen ohne Einzelrückfrage. Nach Neustart ist sie aus.
+Installer noch nicht digital signiert. Kein separates Python erforderlich. Vor Update App schließen, dann Setup über die vorhandene Installation installieren. Alternativ Einstellungen → Updates. Keine Gewähr für alle Drucker/JTL-Versionen; gesetzliche Ansprüche bleiben unberührt. 154 Tests und Windows-Installation/App-Start/Deinstallation erfolgreich; Entwicklungstests ohne echte Portokäufe. Physische Ausdrucke und Einschreiben im eigenen Ablauf prüfen.
 
-Normale Installation mit Desktopverknüpfung, kein separates Python. Vor Update App schließen. Ab 0.14.0: Einstellungen → Updates, Installation nur nach Bestätigung. Installer noch nicht digital signiert.
-
-Adressetikett nur als Entwurf, Wawi-Rückdatei nur für normale Lieferscheine (kein WMS-Paketimport). Kein gemeinsamer Mehrplatzbetrieb. Physische Drucke und echte Postkäufe müssen in der eigenen Umgebung getestet werden. Hinterlegter Preisstand bis 31.12.2026.
-
-Dieses Repository enthält Downloads, Dokumentation und freigegebene Screenshots ohne Kundendaten. Der App-Quellcode bleibt privat.
+Quellcode bleibt privat. Kein gemeinsamer Mehrplatzbetrieb. Preisstand bis 31.12.2026; danach ist ein Preisupdate erforderlich.
