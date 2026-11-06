@@ -1,50 +1,55 @@
-## Internetmarke Studio 0.18.1 – öffentliche Beta
-- Hintergrundbetrieb mit Symbol neben der Windows-Uhr: öffnen, pausieren und beenden.
-- Optionaler Start bei der Windows-Anmeldung; Kaufautomatik nach Neustart weiterhin aus.
-- Kurzer Startdialog mit „Automatik starten“, „Abbrechen“ und optionalem Wechsel in den Hintergrund.
-- Verständlichere Fehlerhilfe; unklare Käufe nicht erneut kaufen.
-- Datenschutzübersicht, Diagnoseexport ohne Kundendaten und passwortgeschützte manuelle Sicherungen.
-- Ausgabenlimit weiterhin optional; standardmäßig keines.
+# Einrichtung und Bedienung – 0.19.0
 
-**Vor dem Update:** Datensicherung erstellen. App über Rechtsklick auf das Symbol neben der Windows-Uhr → Beenden vollständig schließen und laufende Vorgänge abwarten. Erst dann Setup installieren. Bei „Anwendungen konnten nicht geschlossen werden“ App beenden und „Nochmals versuchen“ wählen, nicht ignorieren.
+1. Datensicherung erstellen. Bisherige App über das Symbol neben der Windows-Uhr → Beenden vollständig schließen.
+2. Setup-EXE aus dem aktuellen Release herunterladen und über die vorhandene Installation installieren. Kein separates Python nötig.
+3. Post-API-Zugang freischalten lassen und API Key, API Secret sowie Portokassen-Zugangsdaten im Assistenten eintragen. Verbindung ohne Kauf prüfen.
+4. Für CSV-Verarbeitung JTL-Exportordner und Spaltenzuordnung einrichten. Den Export in JTL separat konfigurieren. Der Marken-Shop benötigt keine CSV.
+5. Drucker, Papierformat und Ausrichtung auch im Windows-Treiber passend einstellen. Brother QL-800 / DK-11201: 90 × 29 mm, Querformat. Neutrale Druckprobe ausführen.
+6. Kauf-/Automatikoptionen wählen. Testlauf betrifft nur Automatik und Mehrfachauswahl, nicht Einzelkauf oder Marken-Shop. Ausgabenlimit optional, standardmäßig keines.
+7. Im letzten Einrichtungsschritt Aufbewahrung und Löschfristen bei Bedarf einstellen. Erst Vorschau prüfen. Keine automatische Löschung dieser Kategorien ohne Aktivierung; die bisherige Aufräumsicherung bleibt bis zum Speichern neuer Regeln bestehen.
+8. Eine Sendung bewusst kaufen und Ausdruck prüfen. Jede Marke nur einmal verwenden.
 
-169 automatisierte Windows-Tests sowie Installation, EXE-Start und Deinstallation bestanden. Keine echten Käufe oder physischen Ausdrucke im Entwicklungstest. Installer noch unsigniert. Nutzung als Beta auf eigenes Risiko; gesetzliche Ansprüche bleiben unberührt.
+## Versand und Marken-Shop
+CSV unterstützt Kompakt-, Groß- und Maxibrief DE. Im Marken-Shop zusätzlich Standardbrief und optional Einschreiben Einwurf oder Übergabe. Briefart und Menge wählen, zum Warenkorb hinzufügen, Gesamtpreis prüfen und kostenpflichtig kaufen. Bis zu 100 Marken pro Bestellung. CSV-Automatik vorher ausschalten. Alle ungedruckten Marken lassen sich drucken; keine gemeinsame A4-Bogenverwaltung.
 
-Hintergrundbetrieb benötigt einen eingeschalteten PC und angemeldeten Windows-Benutzer; kein Windows-Dienst. Bestehende lokale Adressen, Kaufjournal und ältere/automatische Sicherungen sind nicht vollständig verschlüsselt. Die Bezeichnung „Private Testversion“ im Programmfenster stammt aus der Testphase; dieses unveränderte, geprüfte Paket ist jetzt als öffentliche Beta freigegeben.
+Guthaben steht oben in Versand und Marken-Shop; Abrufzeitpunkt beachten, manuell aktualisieren oder Portokasse aufladen. Keine automatische Aufladung.
 
----
+## Automatik und Hintergrund
+In Versand-Einstellungen zunächst Testlauf verwenden. Für Echtbetrieb ausschalten, Testlauf abwählen, speichern und Automatik bewusst starten. Offene Imports/frühere Testläufe werden nachgeholt; vorhandene und unklare Käufe bleiben ausgeschlossen. Nach jedem Programmstart bleibt die Kaufautomatik aus.
 
-# Einrichtung und Update – Internetmarke Studio 0.18.1
+Optional im Startdialog im Hintergrund weiterlaufen lassen. Symbol neben der Windows-Uhr: Öffnen, Pause, Automatik ausschalten, Beenden. PC eingeschaltet und Benutzer angemeldet lassen; kein Windows-Dienst. Ein laufender Vorgang wird beim Beenden abgeschlossen. Eine Druckübergabe an Windows beweist keinen tatsächlichen Ausdruck.
 
-**Öffentliche Beta, Nutzung auf eigenes Risiko.** Vorher Datensicherung erstellen. Echte Käufe kosten Porto; der einzelne Kaufbutton kauft ohne weitere Bestätigung. Keine offizielle JTL-/Post-Anwendung.
+## Fehlerhilfe und Grenzen
+Gekauft ohne Download: vorhandenen Kauf im Archiv abrufen, nicht neu kaufen. Bei Druckfehler zuerst Windows-Warteschlange prüfen. Nach absichtlicher Entfernung der Markendateien ist der Abruf in der App gesperrt. Kaufjournal nicht löschen oder durch neue Lieferscheinnummern umgehen.
 
-## Installation
-1. [Version 0.18.1 öffnen](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.18.1).
-2. Unter Assets **Internetmarke-Studio-Setup-0.18.1.exe** herunterladen und öffnen.
-3. Setup abschließen und die Desktop-Verknüpfung starten. Python ist enthalten.
-4. Der Installer ist noch nicht digital signiert. Quelle prüfen; Windows-Schutz nicht generell abschalten.
+Wawi-Rückexport für normale Lieferscheine, nicht WMS-Pakete. Shop-Marken haben keinen JTL-Rückexport. Kein gemeinsamer Mehrplatzbetrieb. Preisupdate ab 2027 nötig.
 
-## Einrichtungsassistent: sechs Schritte
-1. **Willkommen:** Hinweise zu echten Portokäufen lesen. Die Einrichtung selbst kauft nichts.
-2. **Post verbinden:** API Key, API Secret, Portokassen-E-Mail und Passwort eintragen. API-Zugang zuerst bei der Deutschen Post freischalten lassen; E-Mail/Passwort allein reichen nicht. Verbindung ohne Kauf prüfen. Die Geschäftsanwendung gegebenenfalls in der Portokasse freigeben. Optional Zugang mit Windows-Benutzerschutz speichern und automatische Anmeldung wählen.
-3. **CSV-Ordner:** Nur für JTL-CSV erforderlich. Einen Exportordner anlegen und in App und JTL verwenden. Die App richtet den JTL-Export nicht selbst ein. Beispiel-JTL.csv verwenden oder im CSV-Assistenten Spalten und Versandarten zuordnen. Der reine Import kauft nichts.
-4. **Drucker und Layout:** Windows-Treiber installieren; Drucker, Papierformat und Ausrichtung in App und Treiber passend einstellen. Brother QL-800/DK-11201: 90 × 29 mm, Querformat. Kostenlose neutrale Druckprobe ausführen.
-5. **Kauf und Automatik:** Druck nach Einzelkauf wählen. Testlauf gilt nur für Automatik/Mehrfachauswahl. Das Ausgabenlimit ist standardmäßig AUS und kann optional aktiviert werden. Testmodus und Limit werden gespeichert; die Automatik bleibt zunächst ausgeschaltet.
-6. **Ersten Live-Test prüfen:** Produkt, Preis, Empfänger und Druck prüfen. Marke vollständig in Originalgröße drucken; Empfängeradresse separat anbringen. Jede Marke nur für eine Sendung verwenden.
+## Datenschutz und Sicherung
+Daten lokal, Zugang optional mit Windows-Benutzerschutz; Adressen und Journal nicht vollständig verschlüsselt. Keine Telemetrie implementiert. Diagnoseexport enthält Version, Betriebssystem, Statusanzahlen und Automatik-Schalter, keine Adressen oder Zugangsdaten.
 
-Der Assistent ist später unter Einstellungen erneut erreichbar.
+Manuelle Sicherung als passwortgeschützte .imsbackup-Datei; Passwort separat aufbewahren. Entschlüsselung erzeugt ein vertrauliches ZIP, keinen automatischen Import. Auf einem anderen PC Post-Zugang neu eingeben.
 
-## Update einer vorhandenen Installation
-Unter Einstellungen eine Datensicherung erstellen, App schließen und neues Setup über die vorhandene Installation installieren. Bestehenden Datenordner nicht löschen. Alternativ Einstellungen → Updates. Die Automatik danach bewusst neu aktivieren und Modus prüfen.
+# Internetmarke Studio 0.19.0 – öffentliche Beta
 
-## Guthaben und Aufladen
-Oben in Versand und Marken-Shop stehen Guthaben und Zeitpunkt des letzten Abrufs. ↻ aktualisiert. „Portokasse aufladen“ öffnet die offizielle Post-Seite; nach externer Aufladung aktualisieren. Die App lädt kein Geld automatisch auf. Vor Kauf wird das Guthaben geprüft; bei zu wenig Guthaben wird der fehlende Betrag angezeigt.
+## Updateablauf
+Das Setup prüft vor dem Ersetzen von Dateien, ob die App noch läuft. Ab 0.19.0 fordert es die App zum sicheren Beenden auf; ein laufender Vorgang wird abgeschlossen. Anschließend im Setup erneut Weiter wählen. Ältere Versionen über Rechtsklick auf das Symbol neben der Windows-Uhr → Beenden schließen. Keine erzwungene Prozessbeendigung. Updates aus der App schalten die Automatik aus und verwenden denselben geordneten Abschluss.
 
-## Wichtige Grenzen
-CSV unterstützt weiterhin Kompakt-, Groß- und Maxibrief DE; Standardbrief und Einschreiben sind zunächst im Marken-Shop auswählbar. Kein direkter JTL-Datenbankzugriff. Wawi-Rückdateien gelten für normale Lieferscheine, nicht WMS-Pakete; Import kann Status und Benachrichtigungen ändern. Mehrere Marken werden einzeln gedruckt, nicht gemeinsam auf einem A4-Bogen. Druckerprofile ändern keine Windows-Treibereinstellungen. Adressetikett-Vorschau ist ein Entwurf, keine Frankierung. Kein gemeinsamer Mehrplatzbetrieb.
+## Aufbewahrung
+Unter Weitere Aktionen → Datenschutz & Diagnose → Aufbewahrung und Löschfristen. Auch im letzten Einrichtungsschritt verfügbar.
 
-Bei Downloadfehlern gespeicherten Kauf im Archiv abrufen, nicht neu kaufen. Bei Druckfehlern zuerst die Windows-Warteschlange prüfen. „Druck übergeben“ bestätigt keinen physischen Ausdruck.
+Vier getrennte Optionen: importierte CSV-Dateien; Namen/Adressen in der App; Markendateien/frühere Versuche; alte automatische Sicherungen. Ohne Haken keine Löschung dieser Kategorie. Beim Einschalten sind 30 Tage vorgeschlagen; einstellbar 0–3650 Tage (Sicherungen mindestens 1). Beim Speichern wird die automatische, nicht rückgängig zu machende Löschung ausdrücklich bestätigt. Die bisherigen 30-Tage-Aufräumsicherungen werden durch die gespeicherten neuen Regeln ersetzt, auch wenn alle Optionen ausgeschaltet sind. Ohne gespeicherte neue Regeln bleibt das bisherige Verhalten bestehen.
 
-Daten unter %LOCALAPPDATA%\\MyBeltInternetmarkeDirekt. Adressen und Journal sind nicht vollständig verschlüsselt; Zugangsdaten optional per Windows DPAPI geschützt. Backups vertraulich behandeln. Kaufjournal bleibt beim Aufräumen erhalten. Nur importierte, unveränderte alte CSV mit abgeschlossenen Käufen werden nach Sicherung entfernt. Keine Telemetrie implementiert.
+Vorher mit „Vorschau – nichts löschen“ die aktuell fälligen Mengen prüfen. Bereits fällige Daten werden nach Aktivierung beim nächsten Lauf gelöscht. Bereinigung läuft nur während die App läuft, auch im Hintergrund.
 
-154 automatisierte Tests und Windows-Installation/App-Start/Deinstallation geprüft. Entwicklungstests ohne echte Portokäufe; eigene Live-Prüfung erforderlich. Gesetzliche Ansprüche bleiben unberührt.
+Im Archiv gekaufte Marken auswählen → Weitere Aktionen → Ausdruck geprüft – Löschfrist starten. Mehrfachauswahl möglich. Erst nach Bestätigung beginnen die Fristen für CSV, Kundendaten und Marken. 0 Tage bedeutet beim nächsten Lauf nach Bestätigung, nicht nach bloßer Übergabe an Windows. Eine nochmalige Bestätigung verschiebt die Frist nicht. Unklare oder unbestätigte Käufe bleiben geschützt. Eine CSV wird nur entfernt, wenn unverändert und alle enthaltenen Sendungen bestätigt und fällig sind.
+
+Kundendatenbereinigung entfernt die Empfängerdaten aus dem App-Adressbestand und sendungen.csv; bereits entfernte Adressen werden durch erneuten Import nicht wieder gespeichert. Der gemeinsame Adressetikett-Entwurf wird entfernt. Quelldateien und Sicherungen haben separate Regeln.
+
+Kaufstatus, Lieferschein, Portokassen-Zuordnung sowie Post-Kauf-/Marken-/Trackingkennungen bleiben zum Doppelkaufschutz erhalten. Das ist keine vollständige Anonymisierung. Markendateien können nach ihrer Entfernung weder nachgedruckt noch über die App erneut abgerufen werden. Der Kauf wird dadurch nicht rückgängig gemacht.
+
+Nur Sicherungen im App-Unterordner „sicherungen“ werden nach Alter bereinigt. Extern gespeicherte manuelle Sicherungen, Exportdateien, externe CSV-Kopien und Betriebssystem-Backups selbst verwalten. Keine garantierte sichere Löschung aller Datenträgerspuren. Laufende Datenbank und Zugangsdaten werden nicht gelöscht.
+
+## Testablauf
+Zunächst separate Testdaten verwenden. Einstellungen/Vorschau öffnen, Abbrechen prüfen. Mit einer bereits verwendeten Testmarke den Ausdruck bestätigen, danach eine kurze Frist testen. Vorher erforderliche Daten sichern; externe Sicherung selbst geschützt aufbewahren. Kein erneuter Kauf zum Testen erforderlich. 
+
+188 automatisierte Windows-Tests sowie Installation, EXE-Start, Deinstallation und Setup-Sperre bei laufender App bestanden. Keine echten Käufe oder physischen Ausdrucke im Entwicklungstest. Installer weiterhin unsigniert. Beta-Nutzung auf eigenes Risiko; gesetzliche Ansprüche bleiben unberührt. Die Beschriftung „Private Testversion“ im unveränderten geprüften Programm stammt aus der Testphase; dieses Paket ist jetzt öffentlich freigegeben.
