@@ -1,39 +1,46 @@
-# Internetmarke Studio 0.20.0 – Einrichtung in einfachen Schritten
+# Internetmarke Studio 0.23.14 – Einrichtung und Update
 
-## 1. Herunterladen und installieren
-[Aktueller Download](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) → unter **Assets** die **Internetmarke-Studio-Setup-0.20.0.exe** wählen. Nicht „Source code“. Setup starten und Installation abschließen. Desktop-Verknüpfung wird angelegt; Python oder eine BAT-Datei sind nicht nötig. Installer noch unsigniert; Quelle prüfen und Windows-Schutz nicht generell abschalten.
+## 1. Installieren
+[Aktuelles Windows-Setup](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) öffnen. Unter **Assets** die **Internetmarke-Studio-Setup-0.23.14.exe** herunterladen und starten. Kein Python und keine BAT-Datei nötig. Der Installer ist noch unsigniert; Quelle prüfen und den Windows-Schutz nicht generell abschalten.
 
-**Bereits installiert?** Zuerst Datensicherung erstellen. App über Rechtsklick auf das Symbol neben der Windows-Uhr → **Beenden** schließen. Setup über die vorhandene Installation installieren. Kein Löschen des Datenordners. Ab 0.19.0 kann das Setup das geordnete Beenden anfordern; laufenden Vorgang abwarten und danach **Weiter** erneut wählen.
+**Update:** Studio- und Wawi-Daten sichern. Studio vollständig über das Symbol neben der Windows-Uhr → **Beenden** schließen. Laufenden Vorgang abwarten. Setup über die vorhandene Installation installieren; Datenordner nicht löschen.
 
 ## 2. Post verbinden
-Im Einrichtungsassistenten API Key, API Secret, Portokasse-E-Mail und Passwort eintragen. API-Zugang muss bei der Deutschen Post freigeschaltet sein; E-Mail und Passwort allein reichen nicht. **Verbindung prüfen** kauft kein Porto. Zugang optional geschützt speichern und automatische Anmeldung aktivieren. Auf einem neuen PC Zugang neu eingeben.
+API Key, API Secret, Portokasse-E-Mail und Passwort im Assistenten eingeben. Freigeschalteter Post-API-Zugang und Freigabe der Geschäftsanwendung in der Portokasse sind nötig. Anmeldung kauft kein Porto. Zugang optional mit Windows-Benutzerschutz speichern; auf einem anderen PC neu eingeben.
 
-## 3. CSV nur bei Bedarf einrichten
-Für JTL-Versand den Export der Versand-CSV in JTL separat konfigurieren. In der App den Zielordner auswählen und über den CSV-Assistenten Spalten/Versandarten zuordnen. [Beispiel-CSV](Beispiel-JTL.csv). Neue Dateien werden automatisch eingelesen; Einlesen allein kauft kein Porto.
-Ohne CSV direkt den **Marken-Shop** verwenden.
+## 3. Versandquelle wählen
+**JTL direkt:** Wawi-Installation, SQL-Verbindung, Datenbank und Benutzer im Assistenten einrichten. Studio muss die offenen Lieferscheine zuerst anzeigen. Erst beim anschließenden „Ausführen“ mit „als versendet setzen“ in Wawi wird die aktuelle Versandart ausgewertet. Unter **Versand → Weitere Aktionen → Automatik-Einstellungen → Wawi & Versandquelle** bzw. **Einstellungen → Versand & Betrieb → Wawi & Versandquelle** die Versandarten einmalig zuordnen. Ohne Zuordnung wartet die Sendung.
+Die Rückmeldung ergänzt die Markennummer als Sendungsnummer. Sie löst keine erneute Plattformmeldung und keinen vollständigen Versandabschluss über jtlCore.dll aus. Den Wawi-/Plattformablauf separat prüfen.
 
-## 4. Drucker einrichten
-Im Assistenten oder unter **Drucklayout → Drucker einrichten und kalibrieren**:
-1. Installierten Windows-Drucker auswählen.
-2. Vorlage passend zum eingelegten Papier auswählen.
-3. Dieselbe Größe und Ausrichtung im Windows-Treiber einstellen; ein Exemplar, keine Seitenanpassung.
-4. Neutrale Kalibrierprobe drucken – kein Porto. Die Messlinie muss 20 mm lang sein.
-5. Bei Versatz mit Pfeilen um je 0,2 mm oder per Millimetereingabe korrigieren. Bei falscher Größe zuerst den Treiber prüfen.
-6. Optional Logo/mehrzeilige **Absenderadresse** im Layouteditor ergänzen. Es ist eine feste Adresse für jeden Ausdruck, keine automatische Empfängeradresse. Überlappungen/Anschnitt in der Vorschau prüfen. Für kleine Etiketten ggf. separates Adressetikett oder größeres Format verwenden.
-7. Einstellungen bei Bedarf als Druckerprofil speichern.
+**CSV alternativ:** CSV-Export in Wawi einrichten, denselben Ordner in Studio auswählen und Spalten zuordnen. [Beispieldatei](Beispiel-JTL.csv). Der zusätzliche CSV-Reiter lässt sich in den Einstellungen einblenden.
 
-Vorlagen: Brother QL/DK-11201 90 × 29 mm quer (z. B. QL-800), DK-11202 100 × 62 mm quer, allgemeine Etiketten 100 × 50 und 102 × 152 mm sowie A4-Einzelaufdruck. Treiber werden nicht installiert, Rollen nicht automatisch erkannt. Vorlagen am eigenen Gerät testen.
+**Nur Marken kaufen:** Dafür reicht der Marken-Shop; kein Lieferschein und keine CSV nötig.
 
-## 5. Arbeitsweise wählen
-**Versand:** Sendung auswählen → Preis/Produkt prüfen → kaufen, optional sofort drucken.
-**Marken-Shop:** Briefart, Zusatzleistung und Menge wählen → Warenkorb → Gesamtpreis prüfen → kostenpflichtig kaufen.
-**Automatik:** Zunächst Testlauf ohne Kauf/Druck ausprobieren. Für Echtbetrieb Automatik ausschalten, Testlauf abwählen, speichern und Automatik bewusst aktivieren. Danach werden offene und neue freigegebene CSV-Sendungen gekauft und gedruckt.
-Der Testlauf gilt nicht für Einzelkauf oder Marken-Shop. Ausgabenlimit optional, standardmäßig keines. Nach Programmstart bleibt die Kaufautomatik aus.
+## 4. Drucker und Layout
+**Drucklayout → Drucker einrichten** öffnen: Windows-Drucker, Papier und passende Vorlage wählen. Im Windows-Treiber dieselbe Größe/Ausrichtung einstellen, keine Seitenanpassung. Kostenlose neutrale Druckprobe und Kalibrierung durchführen. Danach unter **Layout bearbeiten** Marke, Adresse oder Logo anordnen. Vorlage am eigenen Drucker testen; sie installiert keinen Treiber.
 
-## 6. Aufbewahrung bestimmen
-Im letzten Einrichtungsschritt oder **Weitere Aktionen → Datenschutz & Diagnose → Aufbewahrung und Löschfristen**. CSV, Kundendaten, Markendateien und app-eigene Sicherungen getrennt aktivieren; empfohlen 30 Tage. Erst **Vorschau – nichts löschen** prüfen.
-Ab 0.20.0 beginnen aktivierte Fristen automatisch nach erfolgreicher Druckübergabe. Auch bereits gespeicherte Regeln gelten dafür. **0 Tage kann Daten sofort beim nächsten Lauf löschen – auch bei Papierstau.**
+## 5. Automatik kontrolliert testen
+Zunächst Testlauf und Druckprobe verwenden. Der Testlauf kauft und druckt in der Versandautomatik nichts; er gilt nicht für ausdrückliche Einzelkäufe im Marken-Shop.
 
-## 7. Erste echte Sendung prüfen
-Eine Sendung bewusst kaufen, Papierausdruck und Empfängeradresse prüfen. Jede Marke nur einmal verwenden. „Druck übergeben“ bestätigt nur die Übergabe an Windows. Bei Fehlern erst Archiv und Druckwarteschlange prüfen, nicht erneut kaufen.
-[Weitere Bedienung, Grenzen und Datenschutz](BETA-ANLEITUNG.md)
+Nach abgeschlossener Einrichtung und Post-Anmeldung kann die Automatik beim Start im gespeicherten Test-/Echtmodus anlaufen. Im Echtbetrieb kauft sie freigegebene Sendungen kostenpflichtig ohne Einzelrückfrage. Sofortdruck wird beim Einschalten standardmäßig aktiviert, kann aber ausgeschaltet werden. Ausgabenlimit optional.
+
+Bei JTL erst prüfen, dass der offene Lieferschein in Studio erfasst ist, dann in Wawi „Ausführen“. Nach Kauf Ausdruck, Archiv und Wawi-Sendungsnummer kontrollieren. Nur eine Studio-Instanz für dieselben Sendungen verwenden. Hintergrundbetrieb benötigt laufenden PC und angemeldeten Windows-Benutzer; kein Windows-Dienst.
+
+## 6. Automatische Portoaufladung – BETA
+**Einstellungen → Post-Zugang → Aufladeeinstellungen**:
+1. Gültiges SEPA-Mandat in der Portokasse hinterlegen.
+2. Guthabengrenze und Aufladebetrag wählen, z. B. unter 10 € um 50 €.
+3. Funktion aktivieren und Lastschrift beim Speichern bestätigen.
+
+Standardmäßig aus, kontogebunden, nur bei laufender App und nicht im Testlauf. Der Aufladebetrag muss mindestens der Guthabengrenze entsprechen. Wiederholte Aufladungen sind möglich, wenn das Guthaben nach erfolgreicher Aufladung erneut unter die Grenze fällt.
+
+Die Versandautomatik wartet bei fehlendem Guthaben und prüft jede Minute erneut. Nach ausreichender Aufladung werden Sendung, Freigabe und Kaufstatus erneut geprüft. Nur ausdrücklich wegen Guthaben wartende Vorgänge vor dem Kaufaufruf dürfen automatisch fortgesetzt werden; alte unklare Käufe nicht blind erneut kaufen.
+
+**Unklare Aufladung:** Kein automatischer Wiederholungsauftrag. Umsatz in der Portokasse prüfen; erst danach unter Aufladeeinstellungen die Sperre bewusst aufheben. PayPal-Aufladung erfolgt über die Post-Webseite. Die SEPA-Funktion wurde mit simulierten Antworten geprüft, noch nicht mit einer echten Lastschrift im Entwicklungstest.
+
+## 7. Datenschutz und Hilfe
+Unter **Einstellungen → Datenschutz** Aufbewahrung und Sicherung festlegen. CSV, Kundendaten, Markendateien und Sicherungen haben getrennte Optionen. Vor Aktivierung die Löschvorschau prüfen. Aktivierte Fristen beginnen nach erfolgreicher Druckübergabe; 0 Tage kann Dateien vor dem tatsächlichen Papierausdruck entfernen.
+
+Bei Fehlern zuerst Archiv und Windows-Druckwarteschlange prüfen. Kein erneuter Kauf einer bereits gekauften oder unklaren Marke. Für Rückmeldungen App-/Windows-/Wawi-Version und Ablauf nennen; keine Passwörter, Kundenadressen oder scannbaren Marken veröffentlichen.
+
+Öffentliche Beta auf eigene Verantwortung; gesetzliche Ansprüche bleiben unberührt. Software kostenlos, Porto kostenpflichtig. Kein offizielles Produkt von JTL oder Deutsche Post.

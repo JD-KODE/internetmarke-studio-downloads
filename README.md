@@ -1,33 +1,37 @@
 # Internetmarke Studio
 
-**Weniger Handarbeit beim Briefversand – kostenlose Windows-App, öffentliche Beta 0.23.11.**
+**Kostenlose Windows-App · öffentliche Beta 0.23.14**
 
-- **JTL direkt:** offene Lieferscheine beobachten; erst nach „Ausführen“ die Versandart auswerten und bei aktivierter Automatik Internetmarken kaufen und drucken.
-- **Andere Dienstleister:** DHL und weitere Versandarten ausdrücklich ausschließen und automatisch ohne Markenkauf archivieren.
-- **CSV alternativ:** vorhandenen CSV-Export weiterverwenden.
-- **Marken-Shop:** Einzelmarken oder Warenkorb, „Kaufen & drucken“ oder „Nur kaufen“.
-- **Druck und Übersicht:** Druckerassistent, Layout, Guthaben, Archiv mit Wawi-Status, Kopierfunktion und Stornoanträgen.
-- **Im Alltag:** Hintergrundbetrieb, optionale Löschfristen, Sicherung und integrierte Updateprüfung.
+1. **JTL direkt:** offene Lieferscheine ohne CSV laden; nach „Ausführen“ in Wawi die aktuelle Versandart prüfen.
+2. **Automatik:** Internetmarken kaufen, optional drucken und die Markennummer an Wawi zurückmelden – auch im Hintergrund.
+3. **Marken-Shop:** Einzelmarken und Warenkorb, „Kaufen & drucken“ oder „Nur kaufen“.
+4. **Archiv & Drucklayout:** Marken finden, Nummern kopieren, Wawi-Status sehen und eigene Etiketten gestalten.
+5. **Porto automatisch aufladen – BETA:** optionaler Guthabengrenzwert und Aufladebetrag per SEPA-Lastschrift.
 
-[**Windows-Installer herunterladen**](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) · [Versionshinweise](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/tag/v0.23.11)
+[**Windows-Setup herunterladen**](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) · [Einrichtung und Update](INSTALLATION.md)
 
-## Andere Versanddienstleister einrichten
+## Neu in 0.23.14
 
-Unter **Versand → Wawi & Versandquelle** die entsprechende Versandart auf **„Anderer Versanddienstleister – kein Markenkauf“** setzen und speichern. Versandarten erscheinen nach dem ersten Ausführen; ohne Zuordnung wartet die Sendung.
+- Offene Lieferscheine bleiben sichtbar, wenn andere Sendungen eine Prüfung benötigen. Hinweise nennen den Lieferschein und den Grund; unklare Freigaben berechtigen nicht zum Kauf.
+- Kompakte Statusleiste unten mit farbigem Moduspunkt und Text.
+- **Portoaufladung BETA:** Einstellungen → Post-Zugang → Aufladeeinstellungen. Standardmäßig aus; pro Post-Konto aktivierbar. Beispiel: unter 10 € um 50 € aufladen.
+- Die Versandautomatik wartet bei fehlendem Guthaben und prüft jede Minute erneut. Vor dem Fortsetzen werden Sendung und Guthaben erneut geprüft.
+- Unklare Aufladungen sperren weitere automatische Abbuchungen auch nach Neustart, bis der Ausgang in der Portokasse geprüft und die Sperre bewusst aufgehoben wurde.
 
-Studio muss den offenen Lieferschein zuvor erfasst haben. Nach „Ausführen“ in Wawi wird die aktuelle Versandart geprüft. Extern zugeordnete Sendungen landen auch bei Automatik AUS im Archiv: **„Anderer Dienstleister – kein Markenkauf“**, Rückmeldung **„Nicht nötig“**. Die tatsächliche Versandart bleibt sichtbar. Es erfolgen kein Kauf, kein Druck und keine Änderung der Wawi-Sendungsnummer. Dies erstellt keine DHL-Etiketten.
+Ein gültiges SEPA-Mandat in der Portokasse ist erforderlich. PayPal-Aufladung nur über die Post-Webseite. Automatisches Aufladen läuft nur bei geöffneter App, auch im Hintergrund, und nicht im Testlauf. Echte Lastschriften wurden im Entwicklungstest nicht ausgeführt. Vorhandene unklare Kaufversuche werden nicht pauschal erneut gekauft.
 
-Bereits vorher versendete Sendungen werden nicht nachträglich importiert. Die Anbindung verarbeitet weiterhin nur eindeutig zuordenbare Lieferscheine mit genau einem Paket. Fehlende Zuordnungen werden nicht automatisch als externe Versandarten behandelt.
+## Hinweise zum Ablauf
 
-## Installation und Update
+Studio muss den offenen Lieferschein zuvor erfasst haben. Die Versandart wird erst nach „Ausführen“ ausgewertet und über eine einmalige Zuordnung dem Portoprodukt zugewiesen. CSV bleibt als Alternative verfügbar. Die JTL-Anbindung verarbeitet eindeutig zuordenbare Lieferscheine mit genau einem Paket. Sie ergänzt die Sendungsnummer per SQL; sie löst keinen vollständigen Versandabschluss über jtlCore.dll und keine erneute Plattformmeldung aus. Den eigenen Wawi-/Plattformablauf prüfen.
 
-1. Studio- und Wawi-Daten sichern.
-2. Studio vollständig beenden, auch über das Symbol neben der Windows-Uhr.
-3. Windows-Setup herunterladen und über die bestehende Installation installieren. Einstellungen und Kaufjournal bleiben erhalten.
-4. Versandzuordnung und Drucker prüfen und zunächst eine Sendung kontrolliert testen.
+DHL und andere Anbieter können unter **Wawi & Versandquelle → Anderer Versanddienstleister – kein Markenkauf** ausgeschlossen werden. Sie werden nach erkannter Wawi-Freigabe ohne Internetmarkenkauf archiviert. Es werden keine DHL-Etiketten erstellt.
 
-Kein separates Python nötig. Ein freigeschalteter Post-API-Zugang ist für Internetmarken erforderlich. Software kostenlos; Porto kostenpflichtig. Eine freigegebene Live-Automatik kauft ohne Einzelrückfrage. Druckübergabe bestätigt keinen tatsächlichen Papierausdruck.
+## Update
 
-Öffentliche Beta, Nutzung auf eigenes Risiko; gesetzliche Ansprüche bleiben unberührt. Unabhängiges Projekt, kein offizielles Produkt von JTL, DHL oder Deutsche Post. Der Installer ist noch nicht signiert.
+Daten sichern → Studio vollständig beenden, auch neben der Windows-Uhr → Setup über die vorhandene Installation installieren → ersten Ablauf kontrolliert prüfen. Kein separates Python nötig.
 
-Dieses Repository enthält öffentliche Downloads und Dokumentation. **Der Quellcode bleibt privat.**
+Automatisierte Tests sowie Windows-Installation und Programmstart erfolgreich geprüft. Keine echten Käufe, Lastschriften oder physischen Ausdrucke im Entwicklungstest.
+
+Öffentliche Beta, Nutzung auf eigene Verantwortung; gesetzliche Ansprüche bleiben unberührt. Software kostenlos, Porto kostenpflichtig. Freigegebene Live-Automatik kauft ohne Einzelrückfrage. „Druck übergeben“ bestätigt die Windows-Übergabe, nicht den Papierausdruck. Installer unsigniert. Unabhängiges Projekt, kein offizielles Produkt von JTL, DHL oder Deutsche Post.
+
+Dieses Repository enthält Downloads und Dokumentation. **Der Quellcode bleibt privat.**
