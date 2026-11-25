@@ -1,6 +1,6 @@
 # Internetmarke Studio
 
-**Kostenlose Windows-App · öffentliche Beta 0.23.16**
+**Kostenlose Windows-App · öffentliche Beta 0.23.17**
 
 1. **JTL direkt:** offene Lieferscheine ohne CSV laden; nach „Ausführen“ in Wawi die aktuelle Versandart prüfen.
 2. **Automatik:** Internetmarken kaufen, optional drucken und die Markennummer an Wawi zurückmelden – auch im Hintergrund.
@@ -10,10 +10,17 @@
 
 [**Windows-Setup herunterladen**](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) · [Einrichtung und Update](INSTALLATION.md)
 
+## Neu in 0.23.17
+
+- Status direkt in der Spalte **Wawi-Status**, ohne zusätzliche Filter- oder Aktionsleiste.
+- Hinweise per Doppelklick; Aktionen per Rechtsklick auf die Sendung.
+- Ältere Archivkäufe mit Prüfhinweis werden nicht mehr zusätzlich im Versand angezeigt. Archivdaten und Kaufsperren bleiben erhalten.
+- Prüfhinweise verändern den gespeicherten Wawi-Datenstand nicht mehr.
+
 ## Neu in 0.23.16
 
 - Einzelne problematische Sendungen werden zur Prüfung zurückgestellt; andere gültige, von Wawi freigegebene Sendungen laufen weiter.
-- Versandansichten: **Wartet auf Wawi**, **In Bearbeitung** und **Bitte prüfen**.
+- Sendungsstatus **Wartet auf Wawi**, **In Bearbeitung** und **Bitte prüfen**; ab 0.23.17 direkt in der Sendungszeile.
 - Archiv mit drei Hauptaktionen: **Marke stornieren**, **Marke drucken**, **Sendung löschen**. Weitere Funktionen per Rechtsklick, Details per Doppelklick. Bestehende Schutzregeln für Kauf und Löschen bleiben erhalten.
 - Markenkauf, Druckübergabe und Wawi-Rückmeldung getrennt sichtbar.
 - Erkannte Updates bleiben deutlich in der Statusleiste sichtbar.
