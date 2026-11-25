@@ -1,6 +1,6 @@
 # Internetmarke Studio
 
-**Kostenlose Windows-App · öffentliche Beta 0.23.15**
+**Kostenlose Windows-App · öffentliche Beta 0.23.16**
 
 1. **JTL direkt:** offene Lieferscheine ohne CSV laden; nach „Ausführen“ in Wawi die aktuelle Versandart prüfen.
 2. **Automatik:** Internetmarken kaufen, optional drucken und die Markennummer an Wawi zurückmelden – auch im Hintergrund.
@@ -9,6 +9,17 @@
 5. **Porto automatisch aufladen – BETA:** optionaler Guthabengrenzwert und Aufladebetrag per SEPA-Lastschrift.
 
 [**Windows-Setup herunterladen**](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) · [Einrichtung und Update](INSTALLATION.md)
+
+## Neu in 0.23.16
+
+- Einzelne problematische Sendungen werden zur Prüfung zurückgestellt; andere gültige, von Wawi freigegebene Sendungen laufen weiter.
+- Versandansichten: **Wartet auf Wawi**, **In Bearbeitung** und **Bitte prüfen**.
+- Archiv mit drei Hauptaktionen: **Marke stornieren**, **Marke drucken**, **Sendung löschen**. Weitere Funktionen per Rechtsklick, Details per Doppelklick. Bestehende Schutzregeln für Kauf und Löschen bleiben erhalten.
+- Markenkauf, Druckübergabe und Wawi-Rückmeldung getrennt sichtbar.
+- Erkannte Updates bleiben deutlich in der Statusleiste sichtbar.
+- Kürzerer Einrichtungsassistent und neuer Schalter **Porto automatisch aufladen AN/AUS · BETA** direkt im Versand. Beim Aktivieren Guthabengrenze, Betrag und wiederholte Lastschrift bestätigen.
+
+[Aktueller Forumsbeitrag](https://forum.jtl-software.de/threads/beta-kostenlos-internetmarke-studio-jtl-csv-einlesen-internetmarken-kaufen-und-drucken.250123/#post-1373008)
 
 ## Neu in 0.23.15
 
