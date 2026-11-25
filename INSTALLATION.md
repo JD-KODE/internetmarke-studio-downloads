@@ -1,7 +1,7 @@
-# Internetmarke Studio 0.23.14 – Einrichtung und Update
+# Internetmarke Studio 0.23.15 – Einrichtung und Update
 
 ## 1. Installieren
-[Aktuelles Windows-Setup](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) öffnen. Unter **Assets** die **Internetmarke-Studio-Setup-0.23.14.exe** herunterladen und starten. Kein Python und keine BAT-Datei nötig. Der Installer ist noch unsigniert; Quelle prüfen und den Windows-Schutz nicht generell abschalten.
+[Aktuelles Windows-Setup](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) öffnen. Unter **Assets** die **Internetmarke-Studio-Setup-0.23.15.exe** herunterladen und starten. Kein Python und keine BAT-Datei nötig. Der Installer ist noch unsigniert; Quelle prüfen und den Windows-Schutz nicht generell abschalten.
 
 **Update:** Studio- und Wawi-Daten sichern. Studio vollständig über das Symbol neben der Windows-Uhr → **Beenden** schließen. Laufenden Vorgang abwarten. Setup über die vorhandene Installation installieren; Datenordner nicht löschen.
 
