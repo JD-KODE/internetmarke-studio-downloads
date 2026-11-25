@@ -1,6 +1,6 @@
 # Internetmarke Studio
 
-**Kostenlose Windows-App · öffentliche Beta 0.23.17**
+**Kostenlose Windows-App · öffentliche Beta 0.23.18**
 
 1. **JTL direkt:** offene Lieferscheine ohne CSV laden; nach „Ausführen“ in Wawi die aktuelle Versandart prüfen.
 2. **Automatik:** Internetmarken kaufen, optional drucken und die Markennummer an Wawi zurückmelden – auch im Hintergrund.
@@ -9,6 +9,14 @@
 5. **Porto automatisch aufladen – BETA:** optionaler Guthabengrenzwert und Aufladebetrag per SEPA-Lastschrift.
 
 [**Windows-Setup herunterladen**](https://github.com/JD-KODE/internetmarke-studio-downloads/releases/latest) · [Einrichtung und Update](INSTALLATION.md)
+
+## Neu in 0.23.18
+
+- Kompakte Statusleiste für **JTL-ERP, Post, Drucker und Updates**, ohne doppelte Routinemeldungen. Details beim Darüberfahren, Einstellungen per Klick.
+- Konkrete Hinweise direkt in der Sendungszeile mit passender Aktion per Doppelklick.
+- Übersichtliche Versandarten-Zuordnung: **Internetmarke, DHL (extern), Andere**. Neue, noch nicht zugeordnete Versandarten stehen zuerst und bleiben gespeichert.
+- **Portokasse aufladen** neben Aktualisieren; **Sendungen laden** neben **Sendungsdetails** unter der Liste.
+- Kauf- und Archivsperren bleiben erhalten. Kauf und Druck erfolgen weiterhin erst nach Wawi-Freigabe.
 
 ## Neu in 0.23.17
 
@@ -49,7 +57,7 @@ Ein gültiges SEPA-Mandat in der Portokasse ist erforderlich. PayPal-Aufladung n
 
 Studio muss den offenen Lieferschein zuvor erfasst haben. Die Versandart wird erst nach „Ausführen“ ausgewertet und über eine einmalige Zuordnung dem Portoprodukt zugewiesen. CSV bleibt als Alternative verfügbar. Die JTL-Anbindung verarbeitet eindeutig zuordenbare Lieferscheine mit genau einem Paket. Sie ergänzt die Sendungsnummer per SQL; sie löst keinen vollständigen Versandabschluss über jtlCore.dll und keine erneute Plattformmeldung aus. Den eigenen Wawi-/Plattformablauf prüfen.
 
-DHL und andere Anbieter können unter **Wawi & Versandquelle → Anderer Versanddienstleister – kein Markenkauf** ausgeschlossen werden. Sie werden nach erkannter Wawi-Freigabe ohne Internetmarkenkauf archiviert. Es werden keine DHL-Etiketten erstellt.
+DHL und andere Anbieter können unter **Wawi & Versandquelle → Versandarten → DHL (extern) oder Andere** ausgeschlossen werden. Sie werden nach erkannter Wawi-Freigabe ohne Internetmarkenkauf archiviert. Es werden keine DHL-Etiketten erstellt.
 
 ## Update
 
